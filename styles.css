@@ -1,0 +1,19 @@
+body {
+    background-color: var(white);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+.container img {
+    max-width:250px;
+    max-height:230px;
+    width: auto;
+    height: auto;
+}
+.open-sans container {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
