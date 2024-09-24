@@ -26,13 +26,16 @@ header {
     justify-content: space-between;
   }
 .corpo img {
-  width: 1500px;
-  height: 700px;
+  width: 150px;
+  height: 150px;
   align-items: center;
+  border-radius: 100px;
 }
 .corpo {
-    background-image: ("img/logo.jpg");
+    background-color: grey;
+    width: 700px;
+    height: 600px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: right;
 }
