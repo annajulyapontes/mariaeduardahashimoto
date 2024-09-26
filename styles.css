@@ -2,9 +2,18 @@
 :root {
 --fonte-principal: "Open Sans", sans-serif;
 }
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+   color: black;
+}
+a:hover {
+   color: black;
+}
 body {
     background-color: var(white);
-    font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
 }
@@ -18,24 +27,29 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255); 
   }
   nav {
     width: 200px;
     display:contents;
     justify-content: space-between;
+    font-family: var(--fonte-principal);
+    text-decoration: none;
   }
 .corpo img {
   width: 450px;
   height: 500px;
-  align-items: center;
-  border-radius: 50%;
-  display: flex;
-  padding: 1em;
+  align-items: right;
+  display:flex;
+  margin-right: 15%;
   
+ 
 }
 .corpo {
     background-color: white;
     display: flex;
-    justify-content: flex-start;
+}
+.corpo_do_site {
+  align-items: center;
+  text-align: center;
 }
