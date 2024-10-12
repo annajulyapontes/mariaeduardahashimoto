@@ -1,18 +1,32 @@
 <?php
-//if "email" variable is filled out, send email
-if (isset($_REQUEST['email']))  {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = strip_tags(trim($_POST["nome"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $telefone = strip_tags(trim($_POST["telefone"]));
+    $mensagem = trim($_POST["mensagem"]);
 
-//Email information
-$admin_email = "annajulyapontes88@gmail.com";
-$email = $_REQUEST['email'];
-$subject = $_REQUEST['subject'];
-$comment = $_REQUEST['comment'];
+    if (empty($nome) || empty($email) || empty($telefone) || empty($mensagem) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: index.html?error=missingfields");
+        exit;
+    }
 
-//send email
-mail($admin_email, "$subject", $comment, "From:" . $email);
+    $to = "annajulyapontes88@gmail.com";
 
-//Email response
-echo "Thank you for contacting us!";
+    $subject = "Novo contato: $nome";
+
+    $email_content = "Nome: $nome\n";
+    $email_content .= "Email: $email\n";
+    $email_content .= "Telefone: $telefone\n\n";
+    $email_content .= "Mensagem:\n$mensagem\n";
+
+    $email_headers = "From: $nome <$email>";
+
+    if (mail($to, $subject, $email_content, $email_headers)) {
+ 
+        header("Location: index.html?success=true");
+    } else {
+ 
+        header("Location: index.html?error=sendfailed");
+    }
 }
-
 ?>
