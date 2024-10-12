@@ -13,7 +13,7 @@ a:hover {
    color: black;
 }
 body {
-    background-color: var(white);
+    background-color: white;
     font-size: 16px;
     font-weight: 400;
 }
@@ -22,34 +22,117 @@ body {
     height:100px;
 }
 header {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     background-color: rgb(255, 255, 255); 
   }
-  nav {
-    width: 200px;
-    display:contents;
-    justify-content: space-between;
-    font-family: var(--fonte-principal);
-    text-decoration: none;
-  }
 .corpo img {
-  width: 450px;
-  height: 500px;
-  align-items: right;
-  display:flex;
-  margin-right: 15%;
-  
- 
-}
+  width: 300px;
+  height: 400px;
+  margin-right: 10%;
+  }
 .corpo {
     background-color: white;
-    display: flex;
 }
 .corpo_do_site {
   align-items: center;
   text-align: center;
+}
+.inicio p {
+  font-size: 25px;
+  margin: 2em;
+}
+.areas_de_atuacao {
+  text-align: right;
+  background-color: rgba(108, 107, 107, 0.36);
+}
+.areas_de_atuacao img {
+  width: 50px;
+  height: 60px;
+  margin-right: 2em;
+}
+.areas_de_atuacao h1 {
+  text-align: center;
+  margin-left: 2em;
+  font-size: 30px;
+}
+.areas_de_atuacao p {
+  text-align: left;
+  font-size: 25px;
+  margin: 2em;
+}
+/* From Uiverse.io by Yaya12085 */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: rgba(108, 107, 107, 0.36);
+  padding: 20px;
+  border-radius: 20px;
+  float: right;
+  margin-right: 3em;
+}
+.title {
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+.form label {
+  position: relative;
+}
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.form label .input:valid + span {
+  color: green;
+}
+.submit {
+  border: none;
+  outline: none;
+  background-color: rgb(3, 19, 65);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+.submit:hover {
+  background-color: rgb(56, 90, 194);
 }
