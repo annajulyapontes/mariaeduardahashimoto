@@ -15,7 +15,7 @@ a:hover {
 body {
     background-color: white;
     font-size: 16px;
-    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
 }
 .cabecalho img {
     width:300px;
@@ -34,10 +34,9 @@ header {
   margin-right: 10%;
   }
 .corpo {
-    background-color: white;
+  margin: 20px;
 }
 .corpo_do_site {
-  align-items: center;
   text-align: center;
 }
 .inicio p {
@@ -45,23 +44,68 @@ header {
   margin: 2em;
 }
 .areas_de_atuacao {
-  text-align: right;
   background-color: rgba(108, 107, 107, 0.36);
+  padding: 20px;
 }
 .areas_de_atuacao img {
   width: 50px;
-  height: 60px;
+  height: auto;
+  margin-left: 20px;
   margin-right: 2em;
+}
+.area_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.area_item img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px; 
+}
+.area_item p {
+  font-size: 16px;
+  margin-top: 0;
+  color: black;
+  text-align: center;
+}
+.layout {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
 }
 .areas_de_atuacao h1 {
   text-align: center;
-  margin-left: 2em;
   font-size: 30px;
+  margin-bottom: 20px;
+}
+.areas_de_atuacao .content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .areas_de_atuacao p {
+  width: 70%;
+  font-size: 20px;
+}
+.text_content {
+  width: 50%; 
+  padding-right: 20px;
+}
+.text_content p {
+  font-size: 18px;
   text-align: left;
-  font-size: 25px;
-  margin: 2em;
+  margin-bottom: 30px;
+}
+.content {
+  width: 50%;
+}
+.linha1, .linha2 {
+  display: flex;
+  justify-content: space-around;
 }
 .form {
   display: flex;
@@ -72,7 +116,7 @@ header {
   padding: 30px;
   border-radius: 20px;
   float: right;
-  margin-right: 3em;
+  margin: 20px auto;
   box-sizing: border-box;
   width: 100%;
 }
@@ -98,7 +142,7 @@ header {
 }
 .form label .input {
   width: 100%;
-  padding: 15px 10px;
+  padding: 15px;
   outline: 0;
   border: 1px solid rgba(105, 105, 105, 0.397);
   border-radius: 10px;
@@ -127,25 +171,35 @@ header {
   color: green;
 }
 .submit {
-  border: none;
-  outline: none;
-  background-color: rgb(3, 19, 65);
-  padding: 15px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  transform: .3s ease;
-  cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
+    background-color: rgb(3, 19, 65);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
 }
 .submit:hover {
   background-color: rgb(3, 25, 91);
 }
 @media (max-width: 768px) {
-  .form {
-    margin-right: 0;
-    max-width: 100%;
-    padding: 20px;
-  }
+  .areas_de_atuacao .content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.area_item img {
+    margin-bottom: 10px;
+}
+.layout {
+  flex-direction: column;
+  align-items: center;
+}
+
+.text_content, .content {
+  width: 100%;
+}
+
+.linha1, .linha2 {
+  justify-content: center;
+}
 }
